@@ -1,3 +1,44 @@
 body {
   background: blanchedalmond;
 }
+.container {
+  display: flex;
+  justify-content: space-around;
+  /* width: 100%; */
+  /* order: 3; */
+  flex-direction: column;
+  min-height: 100vh;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.container > div {
+  background: darkgrey;
+  border: 1px solid gray;
+  /* padding: 50px 0; */
+}
+
+.container > div.a {
+  flex-grow: 1;
+  background: red;
+}
+.container > div.b {
+  flex-grow: 2;
+  background: darkorchid;
+}
+.container > div.c {
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 727px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .container > div.a {
+    flex-basis: 100%;
+  }
+  .container > div.b {
+    flex-grow: 3;
+  }
+}
